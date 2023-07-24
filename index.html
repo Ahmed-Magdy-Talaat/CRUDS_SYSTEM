@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Array & object Crud system</title>
+  </head>
+
+  <body>
+    <div class="w-75 m-auto my-5 shadow-lg p-5">
+      <h1 class="text-uppercase fw-bold text-center">CRUD system</h1>
+      <label for="pname">product Name:</label>
+      <input type="text" id="pname" class="form-control mb-3" />
+      <label for="category">product Category:</label>
+      <input type="text" id="category" class="form-control mb-3" />
+      <label for="price">product Price:</label>
+      <input type="text" id="price" class="form-control mb-3" />
+      <label for="desc">product Discreption:</label>
+      <textarea id="desc" class="form-control mb-3"> </textarea>
+      <button class="btn btn-primary" id="addBtn">Add Product</button>
+      <button class="btn btn-danger" onclick="Reset()">Reset</button>
+    </div>
+    <!-- bs5-table -->
+    <input
+      type="text"
+      onkeyup="searchProduct()"
+      placeholder="search.."
+      class="form-control w-50 m-auto"
+      id="search"
+    />
+    <div class="w-75 m-auto my-5">
+      <table class="table">
+        <thead>
+          <th>index</th>
+          <th>name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>description</th>
+          <th>update</th>
+          <th>delete</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/string.js"></script> -->
+  </body>
+</html>
